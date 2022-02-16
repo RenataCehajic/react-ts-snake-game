@@ -43,6 +43,10 @@ const App = () => {
       piece[1] < 0
     )
       return true;
+
+    for (const segment of snk) {
+      if (piece[0] === segment[0] && piece[1] === segment[1]) return true;
+    }
     return false;
   };
 
